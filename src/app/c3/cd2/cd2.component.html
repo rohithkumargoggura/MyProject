@@ -1,0 +1,41 @@
+<h1>Ex</h1>
+<div class="dashboard-container">
+<div class="chart-row" id="distribution-charts">
+        <div class="chart-col" id="responses-bar">
+            <div class="row-title">
+                <h1>Distribution of Responses</h1>
+                <i class="fa fa-info-circle" (mouseenter)="showToolTip($event)" (mouseleave)="dismissToolTip($event)">
+                    <div class="info-tooltip">
+                        <p *ngFor="let text of infoTooltips.distributionResponses">{{text}}</p>
+                    </div>
+                </i>
+            </div>
+            <div class="row-title">
+                <h3>{{facilityScorecardData.displayLabels.measure}}</h3>
+            </div>
+            <div class="scrollable-chart">
+                <div class="scrollable-chart-container">
+                    <div class="chart"></div>
+                </div>
+                <div class="scrollable-chart-legend">
+                    <span>0%</span>
+                    <span>20%</span>
+                    <span>40%</span>
+                    <span>60%</span>
+                    <span>80%</span>
+                </div>
+            </div>
+        </div>
+        <div class="chart-col" id="comment-donut">
+            <div class="row-title">
+                <h1>Comment Distribution</h1>
+                <i class="fa fa-info-circle" (mouseenter)="showToolTip($event)" (mouseleave)="dismissToolTip($event)">
+                    <div class="info-tooltip">
+                        <p *ngFor="let text of infoTooltips.distributionComments">{{text}}</p>
+                    </div>
+                </i>
+            </div>
+            <div class="chart"></div>
+        </div>
+    </div>
+</div>

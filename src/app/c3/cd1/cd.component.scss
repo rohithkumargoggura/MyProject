@@ -1,0 +1,21 @@
+div.relative {
+    position: relative;
+    width: 900px;
+    height: 200px;
+    border: 3px solid #73AD21;
+} 
+
+div.absolute {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 150px;
+    border: 3px solid #73AD21;
+}
+div.absolute1 {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 150px;
+    border: 3px solid #73AD21;
+}

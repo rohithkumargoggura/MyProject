@@ -1,0 +1,47 @@
+
+<div class="col-md-6">
+    <h3>User storie </h3>
+    <form (ngSubmit)="sendMessage()" #loginForm="ngForm">
+        <div class="form-group">
+            <label for="name">Status</label>
+            <input type="text" class="form-control" id="name"
+                   required
+                   pattern="[a-zA-Z][a-zA-Z ]+"
+                   [(ngModel)]="model.name" name="name"
+                   #name="ngModel">
+            <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">
+                  <div [hidden]="!name.hasError('required')">Name is required</div>
+              <div [hidden]="!name.hasError('pattern')">Only alphabetsallowed</div>
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">Notes</label>
+            <input type="text" class="form-control" id="password"
+                   required
+                   [(ngModel)]="model.password" name="password"
+                   #password="ngModel">
+            <div [hidden]="password.valid || password.pristine"
+                 class="alert alert-danger">
+              Notes is required
+            </div> 
+          </div>
+          <div class="form-group">
+            <label for="name">Owner</label>
+            <input type="text" class="form-control" id="emailaddress"
+                   required
+                   [(ngModel)]="model.email" name="email"
+                   pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                   #email="ngModel">
+            <div [hidden]="email.valid || email.pristine"
+                 class="alert alert-danger">
+              <div [hidden]="!email.hasError('required')">Email is required</div>
+              <div [hidden]="!email.hasError('pattern')">Email format should be <small><b>rohith@abc.com</b></small></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-block" [disabled]="!loginForm.form.valid">Submit</button>
+    </form>
+  </div>
+
+<div id="chart"></div>  

@@ -1,0 +1,26 @@
+<h1>end</h1>
+<h3 class="first">Application</h3>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select Application" optionLabel="name" [showClear]="true"></p-dropdown>
+<p>Selected Application: {{selectedCity ? selectedCity.name : 'none'}}</p>
+<h3 class="first">State</h3>
+<p-dropdown [options]="state" [(ngModel)]="selectedState" placeholder="Select state" optionLabel="name" [showClear]="true"></p-dropdown>
+<p>Selected State: {{selectedState ? selectedState.name : 'none'}}</p>
+<label>Notes</label>
+<input type="text" class="form-control" [(ngModel)]="Notes" placeholder="Select Notes"/>
+<label for="name">Owner</label>
+            <input type="text" class="form-control" id="emailaddress"
+                   required
+                   [(ngModel)]="Email" name="email"
+                   pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                   #email="ngModel" placeholder="Enter email">
+                    <small><b>rohith@abc.com</b></small>
+                   <button type="submit" class="btn btn-success btn-block"  (click)="sendMessage()">Submit</button>
+
+                   <h3 class="first">Application</h3>
+                   <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select Application" optionLabel="name" [showClear]="true"></p-dropdown>
+                   <p>Selected Application: {{selectedCity ? selectedCity.name : 'none'}}</p>
+                   <h3 class="first">State</h3>
+                   <p-dropdown [options]="state" [(ngModel)]="selectedState" placeholder="Select state" optionLabel="name" [showClear]="true"></p-dropdown>
+                   <p>Selected State: {{selectedState ? selectedState.name : 'none'}}</p>
+                   <button type="submit" class="btn btn-success btn-block"  (click)="onChange()">Submit</button>
+                   <div id="chart"></div>
